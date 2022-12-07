@@ -1,13 +1,99 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap");
+/* font-family: 'Bai Jamjuree', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+
+/* font-family: 'Syncopate', sans-serif; */
+
+:root {
+  --color-primary: #d53f41;
+  --color-dark: #626262;
+  --color-darker: #464646;
+  --color-light: #dbd8d6;
+  --color-lighter: #f5f0ec;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+
+.wrapper {
+  margin: 0 5vw;
+}
+
+section {
+  padding: 10vh 0;
+}
+
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+/* nav bar style */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+  font-family: "Syncopate", sans-serif;
+}
+
+.links,
+.fav-link {
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: lowercase;
+}
+
+.links a,
+.fav-link a {
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.logo a {
+  color: inherit;
+  font-size: 2rem;
+}
+
+.links a::after,
+.fav-link a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 2px;
+  transition: 0.3s;
+  background-color: var(--color-primary);
+}
+
+.links a:hover::after,
+.fav-link a:hover::after {
+  width: 120%;
 }
